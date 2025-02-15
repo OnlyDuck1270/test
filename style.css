@@ -1,71 +1,66 @@
+/* This one is for both pages*/
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .banner {
     width: 100%;
-    height: 100vh;
-    background-image: url(about.png);
+}
+html {
+    scroll-behavior: smooth;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(banner.jpg);
     background-size: cover;
-    background-position: center;
-}
-.nav {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    width: 120px;
-    cursor: pointer;
-}
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 30px;
-    position: relative;
-}
-.nav ul li a {
-    text-decoration: none;
-    color: #ff5b0f;
-    font-size: 18px;
-}
-.nav ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #ff5b0f;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-.nav ul li:hover{
-    transform: scale(1.2);
-}
-.nav ul li:hover::after {
-    width: 100%;
-}
-.content {
-    width: 100%;
-    position: absolute;
-    top: 30%;
-    text-align: center;
-    font-style: italic;
-}
-.content h1 {
-    font-size: 150px;
     
 }
-.content p {
-    font-size: 30px;
-    margin: 20px 0;
+/* This one is for index page*/
+nav {
+    display: flex;
+    margin: 40px 30px;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
-.anim {
+.logo {
+    width: 150px;
+    cursor: pointer;
+    margin-left:60px;
+}
+
+nav ul {
+    border: 5px solid #fff;
+    padding: 30px 50px;
+    border-radius: 50px;
+}
+nav ul li {
+    display: inline-block;
+    padding-right: 50px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffab0f;
+    font-size: 15px;
+}
+nav ul li a:hover {
+    color: #fff;
+}
+.content{ /* this one is for both content of index and about*/
+    position: absolute;
+    left: 15%;
+    top:37%;
+}
+.content h1 {
+    font-size: 70px;
+    color: #fff;
+}
+.content p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.animation,.content2, #add{ /*this one is the animation for both pages*/
     opacity: 0;
     transform: translateY(30px);
     animation: moveup 1s linear forwards;
@@ -75,4 +70,51 @@
         opacity: 1;
         transform: translateY(0px);
     }
+}
+strong {
+    color: #ffab0f;
+}
+/* This one is for about page*/
+dl, table, #add {
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+    position: relative;
+}
+dt, dd {
+    padding: 10px;
+}
+dd{
+    margin-left: 70px;
+    color: #ffab0f;
+}
+#tutor {
+    margin-bottom: 50px;
+    color: #ffab0f;
+    font-size: 50px
+}
+table, th, td {
+    margin-top: 30px;
+    padding: 20px;
+    border: 4px solid #fff;
+    border-collapse: collapse;
+    width: 45%;
+    float: center;
+    text-align: center;
+    color: #ffab0f;
+}
+caption {
+    font-size: 50px;
+    color: #ffab0f;
+    margin-bottom: 30px;
+}
+#add {
+    margin-top: 200px;
+    text-align: center;
+}
+.content2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
 }
